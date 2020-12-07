@@ -1,8 +1,6 @@
 import React from 'react';
-import Nav from 'react-bootstrap/Nav';
-import NavBar from 'react-bootstrap/NavBar';
 import styled from 'styled-components';
-
+import { Navbar, Nav } from 'react-bootstrap';
 const Styles = styled.div`
 	.navbar {
 		background: #ff6a00; /* old browsers */
@@ -25,10 +23,10 @@ const Styles = styled.div`
 export default function NavigationBar() {
 	return (
 		<Styles>
-			<NavBar style={{ fontFamily: 'Lobster', fontWeight: 'lighter' }} expand="lg">
-				<NavBar.Brand href="/">dmarselus</NavBar.Brand>
-				<NavBar.Toggle aria-controls="basic-navbar-nav" />
-				<NavBar.Collapse id="basic-navbar-nav">
+			<Navbar style={{ fontFamily: 'Lobster', fontWeight: 'lighter' }} expand="lg">
+				<Navbar.Brand href="/">dmarselus</Navbar.Brand>
+				<Navbar.Toggle aria-controls="basic-navbar-nav" />
+				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav style={{ fontFamily: 'Pacifico', fontWeight: 'lighter' }} className="ml-auto">
 						<Nav.Item>
 							<Nav.Link href="/">Home</Nav.Link>
@@ -40,8 +38,8 @@ export default function NavigationBar() {
 							<Nav.Link href="/timeline">Timeline</Nav.Link>
 						</Nav.Item>
 					</Nav>
-				</NavBar.Collapse>
-			</NavBar>
+				</Navbar.Collapse>
+			</Navbar>
 		</Styles>
 	);
 }
