@@ -6,9 +6,9 @@ export default function GridCard({ bg, title, subtitle, tags = [], icons = [], d
 	function renderIcons() {
 		return (
 			<div className="info-bottom">
-				{icons.map(({ icon, link }) => {
+				{icons.map(({ icon, link }, index) => {
 					return (
-						<IconButton href={link} target="_blank" color="inherit">
+						<IconButton key={index} href={link} target="_blank" color="inherit">
 							{icon}
 						</IconButton>
 					);
@@ -20,9 +20,9 @@ export default function GridCard({ bg, title, subtitle, tags = [], icons = [], d
 	function renderBadges() {
 		return (
 			<div className="info-bottom">
-				{tags.map((tag) => {
+				{tags.map((tag, index) => {
 					return (
-						<Badge style={{ margin: '5px' }} pill variant="primary">
+						<Badge key={index} style={{ margin: '5px' }} pill variant="primary">
 							{tag}
 						</Badge>
 					);

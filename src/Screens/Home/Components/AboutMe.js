@@ -40,9 +40,9 @@ const CAROUSEL_ITEM = [
 	java
 ];
 export default function AboutMe() {
-	function renderItem(src) {
+	function renderItem(src, key) {
 		return (
-			<Slide>
+			<Slide key={key}>
 				<Image src={src} style={{ width: '68px', height: '68px' }} />
 			</Slide>
 		);
@@ -63,7 +63,7 @@ export default function AboutMe() {
 				infinite={true}
 				interval={2000}
 			>
-				<Slider>{CAROUSEL_ITEM.map((item) => renderItem(item))}</Slider>
+				<Slider>{CAROUSEL_ITEM.map((item, index) => renderItem(item, index))}</Slider>
 			</CarouselProvider>
 		</div>
 	);
