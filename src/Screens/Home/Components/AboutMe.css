@@ -1,0 +1,14 @@
+.wrapper {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: space-between;
+	/* background-color: red; */
+}
+
+.carousel {
+	/* background-color: blue; */
+}
+.svg {
+	filter: invert(1);
+}

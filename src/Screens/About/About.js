@@ -1,94 +1,44 @@
-import React from 'react';
-import { VerticalTimeline } from 'react-vertical-timeline-component';
-import { TimelineEvent } from './Components';
-import { SchoolIcon, BriefcaseFill, Award, DescriptionIcon, FlightLandIcon } from './Components/Icons';
-import './About.css';
+import React, { useState, useEffect } from 'react';
+import Slide from 'react-reveal/Slide';
+import { Element } from 'react-scroll';
+import useScrollPosition from '@react-hook/window-scroll';
+import { useWindowSize } from '@react-hook/window-size/';
+import AboutCard from './Components/AboutCard';
+import { CONTENT } from './Constant/Constant';
 
 export default function About() {
-	return (
-		<div>
-			<h2>About</h2>
+	const [ isElementFocused, setIsElementFocused ] = useState([ true, false, false ]);
+	const [ width, height ] = useWindowSize({ fps: 30 });
+	const scrollY = useScrollPosition(30 /*frames per second*/);
+	useEffect(
+		() => {
+			let slide1 = scrollY < height * 1.5;
+			let slide2 = scrollY > height * 0.5 && scrollY < height * 2.5;
+			let slide3 = scrollY > height * 1.5 && scrollY < height * 3.5;
+			setIsElementFocused([ slide1, slide2, slide3 ]);
+		},
+		[ scrollY ]
+	);
 
-			<VerticalTimeline className="vertical-timeline">
-				<TimelineEvent
-					title="React Native Developer"
-					subtitle="Hughes Data System"
-					date="May 2020 - Present"
-					icon={<BriefcaseFill />}
-				/>
-				<TimelineEvent
-					title="Graduated"
-					subtitle="Texas A&M University"
-					date="May 2020"
-					icon={<SchoolIcon />}
-				/>
-				<TimelineEvent
-					title="Web Developer"
-					subtitle="Texas A&M University (Final Project)"
-					date="Jan 2020 - May 2020"
-					icon={<DescriptionIcon />}
-				/>
-				<TimelineEvent
-					title="Internship"
-					subtitle="Hughes Data System"
-					date="June 2019 - May 2020"
-					icon={<BriefcaseFill />}
-				/>
-				<TimelineEvent
-					title="Grader"
-					subtitle="Computer Science Department"
-					date="Oct 2017 - Jan 2020"
-					icon={<BriefcaseFill />}
-				/>
-				<TimelineEvent
-					title="Front Desk Librarian"
-					subtitle="Mary and Jeff Bell Library"
-					date="Oct 2017 - Jan 2020"
-					icon={<BriefcaseFill />}
-				/>
-				<TimelineEvent
-					title="Started My College"
-					subtitle="Texas A&M University"
-					date="Aug 2016"
-					icon={<SchoolIcon />}
-				/>
-				<TimelineEvent
-					title="Moved to United States"
-					// subtitle="Mary and Jeff Bell Library"
-					date="Jan 2016"
-					icon={<FlightLandIcon />}
-				/>
-				<TimelineEvent
-					title="Graduated"
-					subtitle="Astra Manufacturing Polytechnic"
-					date="Jul 2015"
-					icon={<SchoolIcon />}
-				/>
-				<TimelineEvent
-					title="Informational Intern"
-					subtitle="PT. Astra International - Auto 2000"
-					date="Jan 2015 - Jun 2015"
-					icon={<BriefcaseFill />}
-				/>
-				<TimelineEvent
-					title="Mechanical Intern"
-					subtitle="PT. Astra International - Auto 2000"
-					date="Aug 2013 - Jun 2014"
-					icon={<BriefcaseFill />}
-				/>
-				<TimelineEvent
-					title="Started my College"
-					subtitle="Astra Manufacturing Polytechnic"
-					date="Aug 2012"
-					icon={<SchoolIcon />}
-				/>
-				<TimelineEvent
-					title="Graduated from High School"
-					subtitle="Saint Jacob Catholic School"
-					date="May 2012"
-					icon={<SchoolIcon />}
-				/>
-			</VerticalTimeline>
+	return (
+		<div
+			style={{
+				display: 'flex',
+				flexDirection: 'column',
+				width: '100%',
+				alignItems: 'center',
+				marginTop: '2%'
+			}}
+		>
+			{CONTENT.map(({ title, bg, text, tags }, index) => {
+				return (
+					<Element>
+						<Slide left when={isElementFocused[index]}>
+							<AboutCard title={title} imageSource={bg} text={text} tags={tags} />
+						</Slide>
+					</Element>
+				);
+			})}
 		</div>
 	);
 }
