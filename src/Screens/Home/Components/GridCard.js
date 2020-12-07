@@ -1,15 +1,8 @@
 import { IconButton } from '@material-ui/core';
 import React from 'react';
 import { Badge, Card } from 'react-bootstrap';
-import './GridCard.scss';
-export default function GridCard({
-	bg,
-	title,
-	subtitle,
-	tags = [],
-	icons = [],
-	doubleContent = null
-}) {
+import './GridCard.css';
+export default function GridCard({ bg, title, subtitle, tags = [], icons = [], doubleContent = null }) {
 	function renderIcons() {
 		return (
 			<div className="info-bottom">
@@ -42,9 +35,7 @@ export default function GridCard({
 		return (
 			<div className="info">
 				<div className="info-top">
-					<Card.Title style={{ textAlign: 'center' }}>
-						{title}
-					</Card.Title>
+					<Card.Title style={{ textAlign: 'center' }}>{title}</Card.Title>
 					{subtitle && <Card.Text>{subtitle}</Card.Text>}
 					{renderBadges()}
 				</div>
@@ -64,9 +55,7 @@ export default function GridCard({
 			}}
 		>
 			<Card.Img src={bg} alt="Card image" />
-			<Card.ImgOverlay>
-				{doubleContent ? renderDoubleContent() : renderRegularContent()}
-			</Card.ImgOverlay>
+			<Card.ImgOverlay>{doubleContent ? renderDoubleContent() : renderRegularContent()}</Card.ImgOverlay>
 		</Card>
 	);
 }

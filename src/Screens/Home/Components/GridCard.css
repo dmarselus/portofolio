@@ -65,8 +65,11 @@
 }
 
 @media screen and (max-width: 600px) {
-	&.double,
-	&.card {
+	.double {
+		width: 90vw;
+		height: 100vw;
+	}
+	.card {
 		width: 90vw;
 		height: 100vw;
 	}
