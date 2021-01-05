@@ -47,15 +47,27 @@ export default function GridCard({ bg, title, subtitle, tags = [], icons = [], d
 		return <div className="info">{doubleContent}</div>;
 	}
 
+	const sectionClass = doubleContent ? 'section big' : 'section small';
 	return (
-		<Card
-			className={doubleContent ? 'double' : 'card'}
-			style={{
-				borderRadius: '15px'
-			}}
-		>
-			<Card.Img src={bg} alt="Card image" />
-			<Card.ImgOverlay>{doubleContent ? renderDoubleContent() : renderRegularContent()}</Card.ImgOverlay>
-		</Card>
+		// <Card
+		// 	className={doubleContent ? 'double' : 'card'}
+		// 	style={{
+		// 		borderRadius: '15px'
+		// 	}}
+		// >
+		// 	<Card.Img src={bg} alt="Card image" />
+		// 	<Card.ImgOverlay>{doubleContent ? renderDoubleContent() : renderRegularContent()}</Card.ImgOverlay>
+		// </Card>
+
+		<div class={sectionClass}>
+			<div class="content">
+				<div class="content-overlay" />
+				<img class="content-image" src={bg} />
+				<div class="content-details fadeIn-bottom">
+					<h3>{'asd'}</h3>
+					<p>{'asd'}</p>
+				</div>
+			</div>
+		</div>
 	);
 }

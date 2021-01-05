@@ -1,6 +1,5 @@
-import Home from './Home/Home';
 import Timeline from './Timeline/Timeline';
-import About from './About/About';
 import NoMatch from './NoMatch/NoMatch';
-
-export { Home, Timeline, About, NoMatch };
+import SimpleHome from './SimpleHome/SimpleHome';
+import Profile from './Profile/Profile';
+export { Timeline, NoMatch, SimpleHome, Profile };

@@ -3,3 +3,35 @@
 	z-index: -1;
 	height: 100%;
 }
+
+.app {
+	/* background-color: #232324;
+	color: white; */
+	background: linear-gradient(-45deg, #ffffff, #ffcaa4, #ff93c7);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+p,
+a {
+	font-size: small;
+}
+.link {
+	color: rgb(48, 48, 48);
+}
+
+hr.solid {
+	border-top: 2px solid #ff6a00;
+	margin-bottom: 5vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

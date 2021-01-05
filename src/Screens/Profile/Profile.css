@@ -1,0 +1,24 @@
+.profile {
+	padding: 5% 10%;
+	height: 100vh;
+}
+.profile h1 {
+	font-family: 'Pacifico';
+}
+
+.profile h5 {
+	font-weight: normal;
+	margin-bottom: 5%;
+}
+
+.profile a {
+	font-size: 1.5em;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+	.profile {
+		height: auto;
+	}
+}

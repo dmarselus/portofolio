@@ -1,0 +1,31 @@
+.Container {
+	min-height: 500px;
+	height: 100vh;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.Container-Content {
+	padding: 20%;
+}
+.heading {
+	margin-bottom: 2%;
+}
+
+.heading h1,
+h2,
+p {
+	display: inline;
+}
+
+a {
+	text-decoration: underline;
+	color: white;
+}
+a:hover {
+	color: #ff6a00;
+}
+.heading h1 {
+	text-shadow: 2px 2px 0 #ac0857;
+}

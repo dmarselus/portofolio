@@ -9,16 +9,7 @@ import {
 	ArrowRightCircleFill,
 	CodeIcon
 } from '../Components/Icons';
-import {
-	about,
-	astra,
-	gh,
-	indays,
-	mail,
-	profile,
-	PW,
-	tamucc
-} from '../../../Assets/images';
+import { about, astra, gh, indays, mail, profile, PW, tamucc } from '../../../Assets/images';
 
 export function profileIcons() {
 	return [
@@ -45,8 +36,7 @@ export function TAMUCCIcons() {
 		},
 		{
 			icon: <LinkedInIcon fontSize="large" />,
-			link:
-				'https://www.linkedin.com/school/texas-a&m-university-corpus-christi/'
+			link: 'https://www.linkedin.com/school/texas-a&m-university-corpus-christi/'
 		},
 		{
 			icon: <MapIcon fontSize="large" />,
@@ -68,8 +58,7 @@ export function AstraIcons() {
 		},
 		{
 			icon: <LinkedInIcon fontSize="large" />,
-			link:
-				'https://www.linkedin.com/company/politeknik-manufaktur-astra/'
+			link: 'https://www.linkedin.com/company/politeknik-manufaktur-astra/'
 		},
 		{
 			icon: <ArrowRightCircleFill />,
@@ -101,12 +90,12 @@ export function GHIcons() {
 }
 
 export const CONTENT = [
-	{
-		title: 'David Marselus',
-		bg: profile,
-		tags: [ 'Software Developer' ],
-		icons: profileIcons()
-	},
+	// {
+	// 	title: 'David Marselus',
+	// 	bg: profile,
+	// 	tags: [ 'Software Developer' ],
+	// 	icons: profileIcons()
+	// },
 	{
 		bg: about,
 		doubleContent: <AboutMe />

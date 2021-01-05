@@ -4,7 +4,7 @@ import { TimelineEvent } from './Components';
 
 export default function About() {
 	return (
-		<VerticalTimeline className="vertical-timeline">
+		<VerticalTimeline>
 			<TimelineEvent
 				title="Application Developer"
 				subtitle="Hughes Data System"
@@ -54,8 +54,6 @@ export default function About() {
 				tags={[ 'Student Worker' ]}
 			/>
 			<TimelineEvent title="Started My College" subtitle="Texas A&M University" date="Aug 2016" type="school" />
-			{/* <TimelineEvent subtitle="Moved to United States" date="Jan 2016" icon={<FlightLandIcon />} /> */}
-
 			<TimelineEvent
 				title="Graduated"
 				subtitle="Astra Manufacturing Polytechnic"

@@ -1,0 +1,32 @@
+.footer {
+	padding: 5vh 15vw;
+}
+
+.footer-content {
+	display: flex;
+	justify-content: space-around;
+}
+
+.title {
+	font-weight: bold;
+}
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+	.footer {
+		padding: 0 20px;
+	}
+	.footer-content {
+		flex-direction: column;
+	}
+	.part {
+		margin-top: 20px;
+	}
+	hr.solid {
+		margin-top: 50px;
+		margin-bottom: 0;
+	}
+}

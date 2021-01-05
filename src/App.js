@@ -1,25 +1,26 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Home, Timeline, About, NoMatch } from './Screens';
-import { NavigationBar, TSParticles, Layout } from './Components';
+import { Timeline, NoMatch, SimpleHome, Profile } from './Screens';
+import { NavigationBar, Layout, Footer } from './Components';
+
 import './App.css';
 
 function App() {
 	return (
-		<React.Fragment>
-			<TSParticles />
+		<div className="app">
 			<NavigationBar />
 			<Layout>
 				<Router>
 					<Switch>
-						<Route exact path="/" component={Home} />
+						<Route exact path="/" component={SimpleHome} />
 						<Route path="/timeline" component={Timeline} />
-						<Route path="/about" component={About} />
+						<Route path="/about" component={Profile} />
 						<Route component={NoMatch} />
 					</Switch>
 				</Router>
+				<Footer />
 			</Layout>
-		</React.Fragment>
+		</div>
 	);
 }
 
