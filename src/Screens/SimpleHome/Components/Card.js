@@ -74,7 +74,7 @@ export default function Card({ content: { title, icon, content: subContent }, ri
 	return (
 		<div className="home_card">
 			<h1>{title}</h1>
-			<div className="content">
+			<div className={rightIcon ? 'content' : 'content right'}>
 				{rightIcon ? renderText() : renderSVG()}
 				{/* {rightIcon ? renderText() : renderSVG()} */}
 				{rightIcon ? renderSVG() : renderText()}

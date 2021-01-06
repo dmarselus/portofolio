@@ -73,6 +73,9 @@ li {
 	.card-text {
 		width: 90%;
 	}
+	.right {
+		flex-direction: column-reverse;
+	}
 	.content img {
 		width: 350px;
 		height: 350px;
