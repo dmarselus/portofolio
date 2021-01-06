@@ -19,7 +19,7 @@ export default function Profile() {
 				working on a full time (current job) project as well as my own side project (project that I found
 				interesting to work with), because I think the fastest way to learn is learning by doing.
 			</h5>
-			<a className="link" href={RESUME} target="_blank">
+			<a className="link" href={RESUME} target="_blank" download>
 				Résumé ➞
 			</a>
 		</div>
