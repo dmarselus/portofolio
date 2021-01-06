@@ -19,7 +19,11 @@ export default function Profile() {
 				working on a full time (current job) project as well as my own side project (project that I found
 				interesting to work with), because I think the fastest way to learn is learning by doing.
 			</h5>
-			<a className="link" href={RESUME} target="_blank" download>
+			<a
+				className="link"
+				href="https://drive.google.com/file/d/1-7aUwoldj_TrGREgRWO_K0BwoWBIeKtc/view"
+				target="_blank"
+			>
 				Résumé ➞
 			</a>
 		</div>
