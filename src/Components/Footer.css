@@ -1,7 +1,12 @@
 .footer {
 	padding: 5vh 15vw;
 }
-
+.part p {
+	font-size: 1.5em;
+}
+.column a {
+	font-size: 1em;
+}
 .footer-content {
 	display: flex;
 	justify-content: space-around;
@@ -17,16 +22,12 @@
 
 @media screen and (max-width: 600px) {
 	.footer {
-		padding: 0 20px;
+		padding: 45px 25px;
 	}
 	.footer-content {
 		flex-direction: column;
 	}
 	.part {
 		margin-top: 20px;
-	}
-	hr.solid {
-		margin-top: 50px;
-		margin-bottom: 0;
 	}
 }

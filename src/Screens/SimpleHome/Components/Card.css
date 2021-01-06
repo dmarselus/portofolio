@@ -1,8 +1,11 @@
 .home_card {
-	width: 100%;
+	width: 90%;
 	height: 100vh;
-	padding: 0 5vw;
 	margin-top: 20px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .content {
 	display: flex;
@@ -11,13 +14,21 @@
 	justify-content: space-between;
 	align-items: center;
 }
+.content img {
+	width: 500px;
+	height: 500px;
+}
 .card-text {
 	width: 50%;
 }
-.home_card h3 {
+.home_card h1 {
 	font-family: 'Pacifico';
 	text-align: center;
+
+	margin-bottom: 5%;
+	padding: 0 5%;
 }
+
 li {
 	display: flex;
 	flex-direction: row;
@@ -27,7 +38,7 @@ li {
 .text-detail {
 	display: flex;
 	flex-direction: column;
-	margin: 5vh 0 5vh 0;
+	margin-top: 5%;
 	font-family: 'Itim';
 }
 .text-detail p {
@@ -54,12 +65,19 @@ li {
 @media screen and (max-width: 600px) {
 	.home_card {
 		height: auto;
+		width: 100%;
 	}
 	.content {
 		flex-direction: column;
-		padding: 0 15px;
 	}
 	.card-text {
-		width: 100%;
+		width: 90%;
+	}
+	.content img {
+		width: 350px;
+		height: 350px;
+	}
+	ul {
+		padding: 0;
 	}
 }

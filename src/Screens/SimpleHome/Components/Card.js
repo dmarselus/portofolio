@@ -31,9 +31,9 @@ export default function Card({ content: { title, icon, content: subContent }, ri
 						return (
 							<li>
 								<div className="text-detail">
-									<h5>{title}</h5>
-									<p>{period}</p>
-									<p>{subtitle}</p>
+									<h3>{title}</h3>
+									<h5>{period}</h5>
+									<h5>{subtitle}</h5>
 								</div>
 
 								<Icon
@@ -67,12 +67,13 @@ export default function Card({ content: { title, icon, content: subContent }, ri
 	}
 
 	function renderSVG() {
-		return <img width="350px" height="350px" src={icon} />;
+		// return <img width="350px" height="350px" src={icon} />;
+		return <img src={icon} />;
 	}
 
 	return (
 		<div className="home_card">
-			<h3>{title}</h3>
+			<h1>{title}</h1>
 			<div className="content">
 				{rightIcon ? renderText() : renderSVG()}
 				{/* {rightIcon ? renderText() : renderSVG()} */}

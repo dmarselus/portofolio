@@ -6,7 +6,10 @@ const FOOTER = [
 	},
 	{
 		title: 'Contact',
-		links: [ { text: 'davidmarselus28@gmail.com', link: 'mailto:davidmarselus28@gmail.com' } ]
+		links: [
+			{ text: 'davidmarselus28@gmail.com', link: 'mailto:davidmarselus28@gmail.com' },
+			{ text: '+1 361-695-8061', link: 'tel:+1361695081' }
+		]
 	},
 	{
 		title: 'Connect',

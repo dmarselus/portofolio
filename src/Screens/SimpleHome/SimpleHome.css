@@ -1,1 +1,9 @@
+.simple-home {
+	padding: 0 5vw;
+}
 
+@media screen and (max-width: 600px) {
+	.simple-home {
+		padding: 0;
+	}
+}

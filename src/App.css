@@ -3,13 +3,16 @@
 	z-index: -1;
 	height: 100%;
 }
-
+h1 {
+	font-size: 3em;
+}
 .app {
 	/* background-color: #232324;
 	color: white; */
 	background: linear-gradient(-45deg, #ffffff, #ffcaa4, #ff93c7);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
+	overflow-x: hidden;
 }
 p,
 a {
@@ -33,5 +36,11 @@ hr.solid {
 	}
 	100% {
 		background-position: 0% 50%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	hr.solid {
+		margin-bottom: 2%;
 	}
 }

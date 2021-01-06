@@ -1,24 +1,46 @@
 .profile {
-	padding: 5% 10%;
-	min-height: 100vh;
+	padding: 3% 15% 0 15%;
+}
+.profile-content {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
 }
 .profile h1 {
 	font-family: 'Pacifico';
 }
 
-.profile h5 {
+.profile h3 {
 	font-weight: normal;
-	margin-bottom: 5%;
+}
+.profile-content img {
+	padding: 0;
+	margin-left: 20px;
 }
 
 .profile a {
-	font-size: 1.5em;
+	font-size: 2em;
 	text-decoration: none;
 	font-weight: bold;
+	text-shadow: 2px 2px 0 #ff6a00;
 }
 
 @media screen and (max-width: 600px) {
 	.profile {
 		height: auto;
+		padding: 5%;
+	}
+	.profile h1 {
+		text-align: center;
+	}
+	.profile-content {
+		flex-direction: column;
+	}
+	.profile-content img {
+		margin-left: 0px;
+	}
+	.profile h3 {
+		font-size: 1.17em;
 	}
 }
