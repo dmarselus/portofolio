@@ -23,6 +23,7 @@ export default function Card({ content: { title, icon, content: subContent }, ri
 		setAnchorEl(tempAnchorEl);
 		if (link) window.open(link);
 	}
+
 	function renderText() {
 		return (
 			<div className="card-text">
@@ -67,7 +68,6 @@ export default function Card({ content: { title, icon, content: subContent }, ri
 	}
 
 	function renderSVG() {
-		// return <img width="350px" height="350px" src={icon} />;
 		return <img src={icon} />;
 	}
 
@@ -76,7 +76,6 @@ export default function Card({ content: { title, icon, content: subContent }, ri
 			<h1>{title}</h1>
 			<div className={rightIcon ? 'content' : 'content right'}>
 				{rightIcon ? renderText() : renderSVG()}
-				{/* {rightIcon ? renderText() : renderSVG()} */}
 				{rightIcon ? renderSVG() : renderText()}
 			</div>
 		</div>

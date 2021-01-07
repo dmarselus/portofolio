@@ -40,10 +40,8 @@ export default function Banner() {
 					<h1>David Marselus </h1>
 					<h2>is a software developer who focused on UI/UX and Efficiency</h2>
 				</div>
-				<a style={{ fontSize: '22.5px' }} href="/about">
-					About me
-				</a>
-				<p style={{ fontSize: '22.5px' }}> or see below</p>
+				<a href="/about">About me</a>
+				<p> or see below</p>
 			</div>
 		</div>
 	);

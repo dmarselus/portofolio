@@ -19,7 +19,16 @@ a {
 	font-size: small;
 }
 .link {
-	color: rgb(48, 48, 48);
+	overflow: hidden;
+	background: linear-gradient(to right, #ff6a00, #ff6a00 50%, rgb(48, 48, 48) 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+	background-position: 100%;
+	transition: background-position 275ms ease;
+}
+.link:hover {
+	background-position: 0 100%;
 }
 
 hr.solid {

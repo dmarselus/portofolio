@@ -9,6 +9,19 @@
 .Container-Content {
 	padding: 20%;
 }
+
+.Container-Content a,
+.Container-Content p {
+	font-size: 2em;
+	color: #fff;
+}
+.Container-Content a {
+	text-decoration: underline;
+}
+
+.Container-Content a:hover {
+	color: #ff6a00;
+}
 .heading {
 	margin-bottom: 2%;
 }
@@ -19,13 +32,16 @@ p {
 	display: inline;
 }
 
-a {
-	text-decoration: underline;
-	color: white;
-}
-a:hover {
-	color: #ff6a00;
-}
 .heading h1 {
 	text-shadow: 2px 2px 0 #ac0857;
+}
+
+@media screen and (max-width: 600px) {
+	.Container-Content {
+		padding: 10%;
+	}
+	.Container-Content a,
+	.Container-Content p {
+		font-size: 1.5em;
+	}
 }
