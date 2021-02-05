@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Card.css';
 import { Icon, Menu, MenuItem, ListItemText } from '@material-ui/core';
-
+import AndroidIcon from '@material-ui/icons/Android';
+import AppleIcon from '@material-ui/icons/Apple';
 export default function Card({ content: { title, icon, content: subContent }, rightIcon }) {
 	const [ anchorEl, setAnchorEl ] = useState([]);
 
@@ -53,7 +54,11 @@ export default function Card({ content: { title, icon, content: subContent }, ri
 									{menus.map(({ title, link, icon }) => {
 										return (
 											<MenuItem onClick={() => handleClose(subIndex, link)}>
-												<Icon fontSize="small">{icon}</Icon>
+												{icon === 'customApple' ? (
+													<AppleIcon />
+												) : (
+													<Icon fontSize="small">{icon}</Icon>
+												)}
 												<ListItemText inset primary={title} href={link} target="_blank" />
 											</MenuItem>
 										);

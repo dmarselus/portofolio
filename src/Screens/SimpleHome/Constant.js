@@ -34,7 +34,19 @@ export const PROJECTS = {
 			title: 'PlayerWatch',
 			period: '2019 - Current',
 			subtitle: 'Mobile Application Developer',
-			locked: true
+			locked: false,
+			menus: [
+				{
+					title: 'Apple',
+					link: 'https://apps.apple.com/us/app/player-watch/id1519027984',
+					icon: 'customApple'
+				},
+				{
+					title: 'Android',
+					link: 'https://play.google.com/store/apps/details?id=com.playerwatch3',
+					icon: 'android'
+				}
+			]
 		},
 		{
 			title: 'Indays',
